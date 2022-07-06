@@ -5,26 +5,26 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#E64747",
+          "foreground": "#f06464",
           "style": "plain",
           "template": "\n{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
-          "foreground": "#E64747",
+          "foreground": "#f06464",
           "style": "diamond",
           // "template": "{{ .UserName }}@{{ .HostName }} ",
-          "template": "{{ .UserName }}",
+          "template": "{{ .UserName }} ",
           "type": "session"
         },
         {
-          "foreground": "#05db70",
+          "foreground": "lightYellow",
           "style": "powerline",
-          "template": " \ue235 ({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}) ",
+          "template": "\ue235 ({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}) ",
           "type": "python"
         },
         {
-          "foreground": "#FFE700",
+          "foreground": "magenta",
           "foreground_templates": [
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
             "{{ if gt .Ahead 0 }}#16c60c{{ end }}",
@@ -35,7 +35,7 @@
             "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
         }
       ],
@@ -71,7 +71,7 @@
           "type": "exit"
         },
         {
-          "foreground": "#bab02a",
+          "foreground": "#f3eeaf",
           "properties": {
             "threshold": 150
           },
@@ -80,7 +80,7 @@
           "type": "executiontime"
         },
         {
-          "foreground": "#00C5C7",
+          "foreground": "#57ef63",
           "properties": {
             "time_format": "15:04:05"
           },
@@ -98,7 +98,7 @@
         {
           "foreground": "#77E4F7",
           "properties": {
-            "style": "full"
+            "style": "folder"
           },
           "style": "plain",
           "template": "{{ .Path }}",

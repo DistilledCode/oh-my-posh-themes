@@ -4,20 +4,16 @@
     {
       "alignment": "left",
       "segments": [
-        // {
-        //   "foreground": "lightYellow",
-        //   "style": "plain",
-        //   "template": "{{ .UserName }}: ",
-        //   "type": "session"
-        // },
         {
-          "foreground": "#f6df10",
-          "properties": {
-            "fetch_version": true
-          },
           "style": "plain",
-          "template": "(\ue235  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}) ",
-          "type": "python"
+          "template": "\n",
+          "type": "text"
+        },
+        {
+          "foreground": "lightYellow",
+          "style": "plain",
+          "template": "{{ .UserName }}@{{ .HostName }}",
+          "type": "session"
         },
         {
           "foreground": "#04ff00",
@@ -25,7 +21,7 @@
             "style": "folder"
           },
           "style": "plain",
-          "template": "{{ .Path }} ",
+          "template": " <#ffffff>in</> {{ .Path }} ",
           "type": "path"
         },
         {
@@ -38,7 +34,7 @@
             "fetch_stash_count": true
           },
           "style": "plain",
-          "template": "<#ffffff>on</>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": "<#ffffff>on</> {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
         }
       ],
@@ -74,6 +70,15 @@
       "alignment": "left",
       "newline": true,
       "segments": [
+        {
+          "foreground": "#f16687",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "type": "python"
+        },
         {
           "style": "plain",
           "template": "$",

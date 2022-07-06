@@ -30,7 +30,7 @@
             "fetch_upstream_icon": true
           },
           "style": "diamond",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}",
           "trailing_diamond": "\ue0b4",
           "type": "git"
         },
@@ -84,7 +84,7 @@
         },
         {
           "background": "#29315A",
-          "foreground": "#9B6BDF",
+          "foreground": "#9d51e9",
           "leading_diamond": " \ue0b6",
           "properties": {
             "fetch_version": false
@@ -96,7 +96,7 @@
         },
         {
           "background": "#29315A",
-          "foreground": "#AEA4BF",
+          "foreground": "#8143ec",
           "leading_diamond": " \ue0b6",
           "properties": {
             "style": "austin",
@@ -135,7 +135,7 @@
       "segments": [
         {
           "background": "#29315A",
-          "foreground": "#E4F34A",
+          "foreground": "lightYellow",
           "leading_diamond": "\ue0b6",
           "properties": {
             "fetch_version": true
@@ -147,7 +147,7 @@
         },
         {
           "background": "#29315A",
-          "foreground": "#3EC669",
+          "foreground": "#04ff00",
           "leading_diamond": "\ue0b6",
           "properties": {
             "style": "full"
