@@ -28,7 +28,7 @@
           "foreground": "#ff94df",
           "properties": {
             "branch_icon": " <#ff94df><b>\ue0a0 </b></>",
-            "branch_max_length": 25,
+            "branch_max_length": 0,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "fetch_stash_count": true
@@ -48,7 +48,7 @@
           "foreground": "#AEA4BF",
           "properties": {
             "style": "austin",
-            "threshold": 150
+            "threshold": 10
           },
           "style": "plain",
           "template": "{{ .FormattedMs }} <#ffffff>|</>",

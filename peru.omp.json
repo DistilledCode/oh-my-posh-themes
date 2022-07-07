@@ -31,6 +31,8 @@
             "{{ if gt .Behind 0 }}#f450de{{ end }}"
           ],
           "properties": {
+            "branch_max_length": 0,
+            "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
@@ -73,7 +75,7 @@
         {
           "foreground": "#f3eeaf",
           "properties": {
-            "threshold": 150
+            "threshold": 10
           },
           "style": "plain",
           "template": "\uf252 {{ .FormattedMs }} <#ffffff>|</>",

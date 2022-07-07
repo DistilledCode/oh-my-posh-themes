@@ -24,7 +24,7 @@
           ],
           "leading_diamond": " \ue0b6",
           "properties": {
-            "branch_max_length": 25,
+            "branch_max_length": 0,
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
@@ -100,7 +100,7 @@
           "leading_diamond": " \ue0b6",
           "properties": {
             "style": "austin",
-            "threshold": 150
+            "threshold": 10
           },
           "style": "diamond",
           "template": "{{ .FormattedMs }}",
